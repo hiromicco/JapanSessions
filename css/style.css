@@ -5,7 +5,7 @@ body {
   color: #555;
 }
 
-.pt_lg, .about, .room, .access, .question, .contact, .footer__info__right {
+.pt_lg, .about, .room, .access, .availability > h2, .question, .contact, .footer__info__right {
   padding-top: 40px;
 }
 
@@ -482,7 +482,6 @@ a:hover {
 
 .access {
   text-align: center;
-  margin-bottom: 135px;
 }
 
 .access__text {
@@ -892,7 +891,7 @@ header {
 }
 
 @media (min-width: 960px) {
-  .pt_lg, .about, .room, .access, .question, .contact, .footer__info__right {
+  .pt_lg, .about, .room, .access, .availability > h2, .question, .contact, .footer__info__right {
     padding-top: 90px;
   }
   .mb_md, .sub_title, .access__text, .contact__text {
