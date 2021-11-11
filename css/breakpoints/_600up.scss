@@ -7,3 +7,113 @@
   font-size: 20px;
 }
 
+.dn_sp {
+  display: block;
+}
+
+.header {
+  &__slider {
+    height: 100vh;
+
+    & h1 {
+      & img {
+        width: 250px;
+        margin-top: 7px;
+        margin-left: 50px;
+      }
+    }
+  }
+
+  &__head {
+    & .menu_nav {
+      width: 40%;
+      padding-left: 50px;
+    }
+  }
+
+  & .scroll {
+    bottom: 0vh;
+  }
+
+  &__book_btn {
+    width: 220px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    margin-right: 50px;
+
+  }
+}
+
+// menu section
+.menu {
+  margin-top: 45px;
+  margin-bottom: 50px;
+
+  & .section_container {
+    margin: 0 auto;
+  }
+
+  &__row {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  &__item {
+    flex-basis: 50%;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+// news section
+.news {
+  padding-top: 30px;
+  padding-bottom: 28px;
+  background: #f2f0f0;
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__left {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  &__right {
+    & dt {
+      margin-right: 15px;
+      margin-left: 58px;
+    }
+
+    & dd {
+      font-size: 16px;
+    }
+  }
+}
+
+
+// about section
+.about {
+  &__text {
+    text-align: center;
+    padding: 40px 40px 60px 40px;
+  }
+
+  & iframe {
+    height: 400px;
+  }
+}
+
+// room
+.room {
+  &__btns {
+    & > a {
+      width: 80%;
+      margin: 0 auto 20px auto;
+    }
+  }
+}

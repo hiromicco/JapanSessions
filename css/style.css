@@ -5,8 +5,12 @@ body {
   color: #555;
 }
 
-.pt_lg, .about, .room, .access, .question {
+.pt_lg, .about, .room, .access, .question, .contact, .footer__info__right {
   padding-top: 40px;
+}
+
+.pt_md, .menu {
+  padding-top: 20px;
 }
 
 .mb_md, .sub_title, .access__text, .contact__text {
@@ -49,7 +53,7 @@ a:hover {
 
 .header__slider {
   width: 100vw;
-  height: 100vh;
+  height: 60vh;
   background-position: center center;
   background-size: cover;
 }
@@ -195,7 +199,7 @@ a:hover {
   display: inline-block;
   position: absolute;
   right: 50px;
-  bottom: 0;
+  bottom: 60vh;
   z-index: 1;
   padding: 10px 10px 110px;
   overflow: hidden;
@@ -283,25 +287,28 @@ a:hover {
 
 .menu .section_container {
   width: 100%;
-  padding: 0 15px;
-  margin-top: 20px;
   margin-bottom: 20px;
 }
 
 .menu__row {
-  display: block;
-  margin-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
 }
 
 .menu img {
-  display: block;
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 8px;
+  width: 70%;
+  padding: 10px 20px;
 }
 
 .news {
-  padding-top: 20px;
+  background: #f2f0f0;
+  padding: 20px;
 }
 
 .news__container {
@@ -345,8 +352,6 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
   width: 100%;
   padding: 0 20px;
   margin-bottom: 25px;
@@ -361,6 +366,7 @@ a:hover {
 .news__right dl dd {
   font-size: 14px;
   color: #555;
+  text-align: left;
 }
 
 .about {
@@ -373,17 +379,15 @@ a:hover {
   line-height: 1.5;
   text-align: center;
   padding: 0 30px;
-  margin-bottom: 20px;
 }
 
 .about__text {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.8;
   letter-spacing: 0.1em;
-  text-align: center;
-  margin-bottom: 50px;
-  padding: 0 20px;
+  text-align: left;
+  padding: 20px 20px 40px 20px;
 }
 
 .about img {
@@ -391,8 +395,8 @@ a:hover {
 }
 
 .about iframe {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 280px;
 }
 
 .room {
@@ -459,7 +463,7 @@ a:hover {
   color: #fff;
   border-radius: 5px;
   padding-top: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .room__btns > a > span {
@@ -503,7 +507,7 @@ a:hover {
 }
 
 .availability .calender iframe {
-  width: 100%;
+  width: 90%;
   height: 380px;
 }
 
@@ -570,7 +574,6 @@ a:hover {
 
 .contact__text {
   font-size: 18px;
-  text-align: center;
   line-height: 1.5;
   letter-spacing: 0.01em;
   margin-top: 10px;
@@ -627,7 +630,7 @@ a:hover {
   margin-left: 10px;
 }
 
-.contact__forms form .label_box > input {
+.contact__forms form > input {
   display: block;
   width: 100%;
   height: 48px;
@@ -636,23 +639,23 @@ a:hover {
   border: 2px solid #d9d9d9;
 }
 
-.contact__forms form .label_box > input::-webkit-input-placeholder {
+.contact__forms form > input::-webkit-input-placeholder {
   color: #ddd;
 }
 
-.contact__forms form .label_box > input:-ms-input-placeholder {
+.contact__forms form > input:-ms-input-placeholder {
   color: #ddd;
 }
 
-.contact__forms form .label_box > input::-ms-input-placeholder {
+.contact__forms form > input::-ms-input-placeholder {
   color: #ddd;
 }
 
-.contact__forms form .label_box > input::placeholder {
+.contact__forms form > input::placeholder {
   color: #ddd;
 }
 
-.contact__forms form .label_box > textarea {
+.contact__forms form > textarea {
   display: block;
   width: 100%;
   border: 2px solid #d9d9d9;
@@ -723,8 +726,7 @@ a:hover {
 }
 
 .footer__info > h2 {
-  margin-top: 50px;
-  margin-left: 10px;
+  margin: 30px auto 0 auto;
 }
 
 .footer__info__right {
@@ -735,8 +737,10 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 30px;
-  margin-right: 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0 auto;
 }
 
 .footer__info__right ul > li {
@@ -806,22 +810,49 @@ header {
   .dn_sp {
     display: block;
   }
+  .header__slider {
+    height: 100vh;
+  }
+  .header__slider h1 img {
+    width: 250px;
+    margin-top: 7px;
+    margin-left: 50px;
+  }
+  .header__head .menu_nav {
+    width: 40%;
+    padding-left: 50px;
+  }
+  .header .scroll {
+    bottom: 0vh;
+  }
+  .header__book_btn {
+    width: 220px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    margin-right: 50px;
+  }
   .menu {
     margin-top: 45px;
     margin-bottom: 50px;
   }
   .menu .section_container {
-    width: 1240px;
     margin: 0 auto;
   }
   .menu__row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin-bottom: 22px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .menu__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .menu__item img {
+    width: 100%;
   }
   .news {
     padding-top: 30px;
@@ -832,6 +863,13 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .news__left {
+    padding-right: 50px;
+    padding-left: 50px;
   }
   .news__right dt {
     margin-right: 15px;
@@ -840,14 +878,43 @@ header {
   .news__right dd {
     font-size: 16px;
   }
+  .about__text {
+    text-align: center;
+    padding: 40px 40px 60px 40px;
+  }
+  .about iframe {
+    height: 400px;
+  }
+  .room__btns > a {
+    width: 80%;
+    margin: 0 auto 20px auto;
+  }
 }
 
 @media (min-width: 960px) {
-  .pt_lg, .about, .room, .access, .question {
+  .pt_lg, .about, .room, .access, .question, .contact, .footer__info__right {
     padding-top: 90px;
   }
   .mb_md, .sub_title, .access__text, .contact__text {
     margin-bottom: 60px;
+  }
+  .dn_pc {
+    display: none;
+  }
+  .menu__row {
+    max-width: 1240px;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .menu__item {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+  .menu__item img {
+    width: 100%;
+    padding: 10px;
   }
   .news__left {
     margin-left: 245px;
@@ -857,6 +924,190 @@ header {
     margin-right: 60px;
   }
   .news__left > p {
+    font-size: 16px;
+  }
+  .about {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  .about__concept {
+    font-size: 24px;
+  }
+  .about__text {
+    font-size: 20px;
+  }
+  .about img {
+    width: 80%;
+    margin-bottom: 60px;
+  }
+  .about iframe {
+    width: 80%;
+    height: 570px;
+  }
+  .room {
+    padding-bottom: 50px;
+    padding-bottom: 60px;
+  }
+  .room .section_container {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  .room__img_row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .room__img_row > img {
+    max-width: 590px;
+  }
+  .room__img_row.image_right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .room__img_row.image_right .room__text {
+    text-align: right;
+    margin-right: 26px;
+  }
+  .room__text h3 {
+    margin-top: 85px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  .room__text h3 .first_title {
+    margin-top: 105px;
+  }
+  .room__text p {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  .room__btns {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .room__btns > a {
+    width: 370px;
+    font-size: 18px;
+    margin: 0;
+  }
+  .room__btns .book_btn {
+    margin-right: 90px;
+  }
+  .availability .calender {
+    width: 960px;
+    margin: 0 auto 20px auto;
+  }
+  .availability .calender iframe {
+    width: 800px;
+    height: 560px;
+  }
+  .availability__text {
+    margin-bottom: 160px;
+  }
+  .question .section_container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .question .section_container .q_box > p {
+    background: url(../images/question-arrow.png) no-repeat center left 5px;
+    padding-left: 30px;
+  }
+  .question .section_container .small_text {
+    font-size: 15px;
+    letter-spacing: -0.05em;
+  }
+  .contact__text {
+    margin-top: 20px;
+    margin-bottom: 68px;
+    text-align: center;
+  }
+  .contact__forms {
+    width: 940px;
+  }
+  .contact__forms form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contact__forms form .label_box {
+    width: 240px;
+    height: 72px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contact__forms form .label_box > label {
+    font-size: 16px;
+    line-height: 72px;
+  }
+  .contact__forms form > input {
+    width: 690px;
+    margin-right: 10px;
+    margin-top: 12px;
+    padding-left: 10px;
+  }
+  .contact__forms form > textarea {
+    width: 690px;
+    margin-top: 12px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  .contact__forms form.contact__submit .submit_btn {
+    width: 310px;
+    margin: 80px auto 115px auto;
+  }
+  .footer .snsicons {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .footer .snsicons i {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    line-height: 45px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  .footer__info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  .footer__info > h2 {
+    margin-top: 87px;
+    margin-left: 120px;
+  }
+  .footer__info__right {
+    margin-right: 80px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footer__info__right ul {
+    margin-right: 60px;
+  }
+  .footer__info__right ul > li {
+    margin-bottom: 23px;
+  }
+  .footer__info__right ul > li > a {
+    font-size: 18px;
+  }
+  .footer .copyright {
     font-size: 16px;
   }
 }

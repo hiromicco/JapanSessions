@@ -10,6 +10,10 @@ body {
   padding-top: 40px;
 } //section padding-top
 
+.pt_md {
+  padding-top: 20px;
+}
+
 .mb_md {
   margin-bottom: 30px;
 } //sub-title margin-bottom
@@ -47,7 +51,7 @@ a:hover {
 .header {
   &__slider {
     width: 100vw;
-    height: 100vh;
+    height: 60vh;
     background-position: center center;
     background-size: cover;
   }
@@ -176,7 +180,7 @@ a:hover {
     display: inline-block;
     position: absolute;
     right: 50px;
-    bottom: 0;
+    bottom: 60vh;
     z-index: 1;
     padding: 10px 10px 110px;
     overflow: hidden;
@@ -225,30 +229,29 @@ a:hover {
 // menu section
 .menu {
   margin: 0;
+  @extend .pt_md;
 
   & .section_container {
     width: 100%;
-    padding: 0 15px;
-    margin-top: 20px;
     margin-bottom: 20px;
   }
 
   &__row {
-    display: block;
-    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 
   & img {
-    display: block;
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 8px;
+    width: 70%;
+    padding: 10px 20px;
   }
 }
 
 // news section
 .news {
-  padding-top: 20px;
+  background: #f2f0f0;
+  padding: 20px;
 
   &__container {
     display: block;
@@ -288,7 +291,6 @@ a:hover {
 
     & dl {
       display: flex;
-      align-content: center;
       width: 100%;
       padding: 0 20px;
       margin-bottom: 25px;
@@ -302,6 +304,7 @@ a:hover {
       & dd {
         font-size: 14px;
         color: #555;
+        text-align: left;
       }
     }
   }
@@ -318,17 +321,15 @@ a:hover {
     line-height: 1.5;
     text-align: center;
     padding: 0 30px;
-    margin-bottom: 20px;
   }
 
   &__text {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.8;
     letter-spacing: 0.1em;
-    text-align: center;
-    margin-bottom: 50px;
-    padding: 0 20px;
+    text-align: left;
+    padding: 20px 20px 40px 20px;
   }
 
   & img {
@@ -336,8 +337,8 @@ a:hover {
   }
 
   & iframe {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 280px;
   }
 }
 
@@ -395,7 +396,7 @@ a:hover {
       color: #fff;
       border-radius: 5px;
       padding-top: 18px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
 
       & > span {
         display: block;
@@ -443,7 +444,7 @@ a:hover {
     margin-bottom: 55px;
 
     & iframe {
-      width: 100%;
+      width: 90%;
       height: 380px;
     }
   }
@@ -511,10 +512,10 @@ a:hover {
 // contact section
 .contact {
   background: #fafafa;
+  @extend .pt_lg;
 
   &__text {
     font-size: 18px;
-    text-align: center;
     line-height: 1.5;
     letter-spacing: 0.01em;
     margin-top: 10px;
@@ -542,7 +543,7 @@ a:hover {
 
         & > label {
           font-size: 15px;
-          line-height: 50px;
+          line-height: 50px; 
           margin-left: 10px;
         }
 
@@ -558,25 +559,25 @@ a:hover {
           margin-left: 10px;
         }
 
-        & > input {
-          display: block;
-          width: 100%;
-          height: 48px;
-          margin: 0 auto;
-          padding-left: 12px;
-          border: 2px solid #d9d9d9;
+      }
+      & > input {
+        display: block;
+        width: 100%;
+        height: 48px;
+        margin: 0 auto;
+        padding-left: 12px;
+        border: 2px solid #d9d9d9;
 
-          &::placeholder {
-            color: #ddd;
-          }
+        &::placeholder {
+          color: #ddd;
         }
+      }
 
-        & > textarea {
-          display: block;
-          width: 100%;
-          border: 2px solid #d9d9d9;
-          margin: 0 auto;
-        }
+      & > textarea {
+        display: block;
+        width: 100%;
+        border: 2px solid #d9d9d9;
+        margin: 0 auto;
       }
 
       &.contact__submit {
@@ -633,15 +634,15 @@ a:hover {
     padding: 0 20px;
 
     & > h2 {
-      margin-top: 50px;
-      margin-left: 10px;
+      margin: 30px auto 0 auto;
     }
 
     &__right {
       display: flex;
       flex-direction: column;
-      margin-top: 30px;
-      margin-right: 0;
+      align-items: flex-start;
+      @extend .pt_lg;
+      margin: 0 auto;
 
       & ul {
         & > li {
@@ -666,48 +667,46 @@ a:hover {
   }
 }
 
+/* 作業用 */
+header {
+  /* display: none; */
+}
 
- 
-  /* 作業用 */
-  header {
-    /* display: none; */
-  }
-  
-  main {
-    //  display: none; 
-  }
-  .menu {
-    /* display: none; */
-  }
+main {
+  //  display: none;
+}
+.menu {
+  /* display: none; */
+}
 
-  #news {
-    /* display: none; */
-  } 
+#news {
+  /* display: none; */
+}
 
-  #about {
-    /* display: none; */
-  }
+#about {
+  /* display: none; */
+}
 
-  #room {
-    /* display: none; */
-  }
+#room {
+  /* display: none; */
+}
 
-  #access {
-    /* display: none; */
-  }
-  
-  #availability {
-    /* display: none; */
-  }
+#access {
+  /* display: none; */
+}
 
-  #question {
-    /* display: none; */
-  }
+#availability {
+  /* display: none; */
+}
 
-  #contact {
-    /* display: none; */
-  }
+#question {
+  /* display: none; */
+}
 
-  footer {
-    // display: none;
-  }
+#contact {
+  /* display: none; */
+}
+
+footer {
+  // display: none;
+}
